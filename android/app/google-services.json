@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "214167247821",
+    "project_id": "imagegallery-13c30",
+    "storage_bucket": "imagegallery-13c30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214167247821:android:eb369a82f7ac4f0f7d4284",
+        "android_client_info": {
+          "package_name": "com.royalcourtbd.image_gallery"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxOJcr9wGPyjmZhTJZ5Ro2hKPADoxLrb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
