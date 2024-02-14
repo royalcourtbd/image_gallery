@@ -15,7 +15,7 @@ class ImageGallery extends StatelessWidget {
         useMaterial3: true,
       ),
       initialBinding: AllControllerBinding(),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
