@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_gallery/presenter/controller/home_controller.dart';
+import 'package:image_gallery/presenter/ui/privacy_policy.dart';
 import 'package:image_gallery/presenter/ui/view_image.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
@@ -17,7 +18,35 @@ class HomePage extends GetView<HomeController> {
       appBar: AppBar(
         title: const Text('Image Gallery'),
         centerTitle: true,
-        backgroundColor: Colors.purple.shade200,
+        backgroundColor: Color(0xffF4C2C2),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color(0xffF4C2C2),
+              ),
+              child: Center(
+                child: Image.asset('assets/images/splash_icon.png'),
+              ),
+            ),
+            ListTile(
+              leading: Icon(Icons.policy),
+              title: Text('Privacy Policy'),
+              onTap: () {
+                // Update the state of the app
+                // Then close the drawer
+                Navigator.pop(context); // Close the drawer
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PrivacyPolicy()),
+                );
+              },
+            ),
+          ],
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(4.0),

@@ -1,10 +1,95 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class PrivacyPolicy extends StatelessWidget {
   const PrivacyPolicy({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    final ThemeData theme = Theme.of(context);
+    final TextTheme textTheme = theme.textTheme;
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Privacy Policy'),
+        centerTitle: true,
+        backgroundColor: const Color(0xffF4C2C2),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: ListView(
+          children: [
+            _build_header_text(
+                textTheme: textTheme, text: 'Privacy Policy for Image Gallery'),
+            Gap(8),
+            Text(
+              'Effective date: 15 - February - 2024',
+              style: textTheme.bodyLarge!.copyWith(fontWeight: FontWeight.bold),
+            ),
+            Gap(15),
+            _build_body_text(
+              textTheme: textTheme,
+              text:
+                  'This privacy policy ("Policy") describes how the Image Gallery mobile application (\'App\') collects, uses, and shares information about you. This Policy applies to all users of the App. By using the App, you agree to the collection and use of information in accordance with this Policy. If you do not agree with the terms of this Policy, do not access or use the App.',
+            ),
+            Gap(15),
+            Text(
+              'Information Collection and Use',
+              style: textTheme.headlineMedium,
+            ),
+            Gap(8),
+            _build_body_text(
+                textTheme: textTheme,
+                text:
+                    'The Image Gallery App does not collect or store any personal information from its users. We are committed to respecting your privacy and recognizing the need for appropriate protection and management of any personal information you share with us.'),
+            Gap(15),
+            _build_header_text(
+                textTheme: textTheme, text: "Internet Permission"),
+            Gap(8),
+            _build_body_text(
+                textTheme: textTheme,
+                text:
+                    'Our App requires internet permission solely to access online resources and functionalities. This permission is used to enhance the user experience by enabling features such as browsing online galleries. We do not collect or store any data transmitted over the internet while using the App.'),
+            Gap(15),
+            _build_header_text(
+                textTheme: textTheme, text: "Data Sharing and Disclosure"),
+            Gap(8),
+            _build_body_text(
+                textTheme: textTheme,
+                text:
+                    'Since we do not collect or store personal information, we have no data to share or disclose to third parties.'),
+            Gap(15),
+            _build_header_text(
+                textTheme: textTheme, text: "Changes to This Privacy Policy"),
+            Gap(8),
+            _build_body_text(
+                textTheme: textTheme,
+                text:
+                    'We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.'),
+            Gap(15),
+            _build_header_text(textTheme: textTheme, text: "Contact Us"),
+            Gap(8),
+            _build_body_text(
+                textTheme: textTheme,
+                text:
+                    'If you have any questions about this Privacy Policy, please contact us. royalcourtbd@gmail.com'),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Text _build_body_text({required TextTheme textTheme, required String text}) {
+    return Text(
+      text,
+      style: textTheme.bodyMedium,
+    );
+  }
+
+  Text _build_header_text(
+      {required TextTheme textTheme, required String text}) {
+    return Text(
+      text,
+      style: textTheme.headlineSmall,
+    );
   }
 }
