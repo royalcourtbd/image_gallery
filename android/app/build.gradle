@@ -31,7 +31,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace "com.royalcourtbd.image_gallery"
-    compileSdkVersion 33
+    compileSdkVersion 34
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -49,10 +49,10 @@ android {
 
     defaultConfig {
         applicationId "com.royalcourtbd.image_gallery"
-        minSdkVersion 21
-        targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 2
+        versionName "1.0.1"
         multiDexEnabled true // multidex support here
     }
 
